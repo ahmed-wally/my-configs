@@ -2,7 +2,9 @@ return {
 	"Myzel394/easytables.nvim",
 	config = function ()
 		require("easytables").setup{}
-	end
+	end,
+	event = function() vim.g.mkdp_filetypes = { "markdown" } end,
+	ft = { "markdown" },
 }
 
 
