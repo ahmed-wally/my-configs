@@ -61,7 +61,7 @@ main_menu() {
     else
         action=$(echo -e "open\ndelete\nmove" | menu_force "$note")
         case $action in
-            "open") nvim "$NOTES_DIR/$file_name" ;;
+            "open") alacritty -e nvim "$NOTES_DIR/$file_name" ;;
             "move")
                 confirm=$(menu_move "move")
                 # case $confirm in
