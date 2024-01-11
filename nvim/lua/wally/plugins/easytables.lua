@@ -2,6 +2,9 @@ return {
 	"Myzel394/easytables.nvim",
 	config = function ()
 		require("easytables").setup{}
+		local keymap = vim.keymap
+		keymap.set("n", "et", "<cmd>ExportTable<CR>")
+		keymap.set("n", "<F9>", "<cmd>EasyTablesImportThisTable<CR>")
 	end,
 	event = function() vim.g.mkdp_filetypes = { "markdown" } end,
 	ft = { "markdown" },
